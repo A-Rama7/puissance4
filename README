@@ -12,14 +12,4 @@ Si il ne possède pas la class full, il va checker si la case du dessous
 possède la class full, de manière récursive jusqu'a atteindre une case full
 ou bien jusqu'a avoir attein la dernière ligne du tableau.
 
-
-fonction check_how_many_red_at_left() {
-    Tant que can_go_left()
-        goleft()
-        Si ($(cell at left) is_red())
-            count_red();
-}
-
-    
-    
-    
+Projet en HTML SCSS JS
