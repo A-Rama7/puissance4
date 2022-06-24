@@ -1,0 +1,447 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-image: url(./bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  color: whitesmoke;
+  font-family: 'Press Start 2P', cursive;
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 5rem;
+}
+
+#board {
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: inherit;
+  background-color: rgba(39, 39, 39, 0.555);
+  -webkit-animation: 1s ease-in-out slidein;
+          animation: 1s ease-in-out slidein;
+  -webkit-animation-name: glissement1;
+          animation-name: glissement1;
+}
+
+.cell {
+  width: 5vw;
+  height: 5vw;
+  border-style: solid;
+  border-color: rgba(0, 140, 255, 0.411);
+  border-radius: 50%;
+  border-width: 0.2vw;
+  background-color: rgba(102, 102, 102, 0.678);
+}
+
+.cell:hover {
+  cursor: pointer;
+}
+
+.full:hover {
+  cursor: default;
+}
+
+.btn {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  border-width: .5rem;
+  border-color: rgba(0, 0, 0, 0.63);
+  border-radius: 10%;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #8a2be2;
+}
+
+.hide {
+  display: none;
+}
+
+.red {
+  background-color: #ae2be2a4;
+  -webkit-animation: 0.5s ease-in-out slidein;
+          animation: 0.5s ease-in-out slidein;
+  -webkit-animation-name: glissement2;
+          animation-name: glissement2;
+}
+
+.yellow {
+  background-color: rgba(0, 204, 255, 0.486);
+  -webkit-animation: 0.5s ease-in-out slidein;
+          animation: 0.5s ease-in-out slidein;
+  -webkit-animation-name: glissement2;
+          animation-name: glissement2;
+}
+
+.particle {
+  width: 5px;
+  z-index: 100;
+  position: absolute;
+  top: 100%;
+  border-radius: 50%;
+  height: 5px;
+  background-color: #ff00ea;
+  -webkit-animation: 2.5s ease-in infinite slidein;
+          animation: 2.5s ease-in infinite slidein;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+}
+
+.p1 {
+  top: 100%;
+  left: 3%;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.p2 {
+  top: 100%;
+  left: 3%;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.p3 {
+  top: 100%;
+  left: 6%;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.p4 {
+  top: 100%;
+  left: 9%;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.p5 {
+  top: 100%;
+  left: 12%;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.p6 {
+  top: 100%;
+  left: 16%;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.p7 {
+  top: 100%;
+  left: 19%;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.p8 {
+  top: 100%;
+  left: 21%;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.p9 {
+  top: 100%;
+  left: 24%;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.p10 {
+  top: 100%;
+  left: 27%;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.p11 {
+  top: 100%;
+  left: 30%;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.p12 {
+  top: 100%;
+  left: 33%;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.p13 {
+  top: 100%;
+  left: 36%;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.p14 {
+  top: 100%;
+  left: 39%;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.p15 {
+  top: 100%;
+  left: 42%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.p16 {
+  top: 100%;
+  left: 45%;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.p17 {
+  top: 100%;
+  left: 48%;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.p18 {
+  top: 100%;
+  left: 51%;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.p19 {
+  top: 100%;
+  left: 54%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.p20 {
+  top: 100%;
+  left: 57%;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.p21 {
+  top: 100%;
+  left: 60%;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.p22 {
+  top: 100%;
+  left: 63%;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.p23 {
+  top: 100%;
+  left: 66%;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.p24 {
+  top: 100%;
+  left: 69%;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.p25 {
+  top: 100%;
+  left: 72%;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.p26 {
+  top: 100%;
+  left: 75%;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.p27 {
+  top: 100%;
+  left: 78%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.p28 {
+  top: 100%;
+  left: 81%;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.p29 {
+  top: 100%;
+  left: 84%;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.p30 {
+  top: 100%;
+  left: 87%;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+@-webkit-keyframes glissement1 {
+  from {
+    margin-top: -100%;
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
+  }
+  to {
+    margin-top: 0%;
+  }
+}
+
+@keyframes glissement1 {
+  from {
+    margin-top: -100%;
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
+  }
+  to {
+    margin-top: 0%;
+  }
+}
+
+@-webkit-keyframes glissement2 {
+  0% {
+    margin-top: -130%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+@keyframes glissement2 {
+  0% {
+    margin-top: -130%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    margin-top: -30%;
+    background-color: aqua;
+  }
+  25% {
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #ff00ea;
+  }
+  100% {
+    margin-top: -100%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    margin-top: -30%;
+    background-color: aqua;
+  }
+  25% {
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #ff00ea;
+  }
+  100% {
+    margin-top: -100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
